@@ -5,6 +5,11 @@
    export default (await import('vue')).defineComponent({
        components:{
            AdminLayout,
+       },
+       methods: {
+           getPageSections(){
+               alert('I am about to get page sections');
+           }
        }
    })
 </script>
@@ -25,7 +30,7 @@
                                         <div class="col-sm-12">
                                             <div class="form-group p-card-body">
                                                 <label>Select</label>
-                                                <select class="form-control">
+                                                <select @change="getPageSections()" class="form-control">
                                                     <option>Home Page</option>
                                                     <option>About Us</option>
                                                     <option>Contact Us</option>
@@ -44,3 +49,32 @@
     </AdminLayout>
 
 </template>
+
+<style scoped>
+   .section-footer{
+       display: flex;
+       justify-content: flex-end;
+   }
+
+   .bg-success{
+       background-color: #ff6c60;
+       color: #fff;
+       border-color: #ff6c60;
+   }
+
+   .card{
+       position: relative;
+       display: -ms-flexbox;
+       display: flex;
+       -ms-flex-direction: column;
+       flex-direction: column;
+       min-width: 0;
+       word-wrap: break-word;
+       background-color: #fff;
+       background-clip: border-box;
+       border: 0 solid rgba(0,0,0,.125);
+       border-radius: 0.25rem;
+   }
+
+
+</style>
