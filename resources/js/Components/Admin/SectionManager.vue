@@ -1,5 +1,5 @@
 <script>
-   export default (await import('vue')).defineComponent({
+export default (await import('vue')).defineComponent({
       data(){
           return{
               isPanelActive : false,
@@ -9,19 +9,20 @@
           togglePanel(){
               this.isPanelActive = !this.isPanelActive;
           }
-      }
+      },
+    props: ['section']
    });
 </script>
 
 <template>
     <div @click="togglePanel()" class="accordion section-title">
-        Slider
+        {{  section.title }}
         <font-awesome-icon icon="fa-plus"></font-awesome-icon>
     </div>
 
     <div class="panel" :class="{active:isPanelActive}">
         <div class="panel-content">
-            I am the panel content
+            {{ section.content }}
         </div>
         <div class="panel-footer">
             <div class="right-col">

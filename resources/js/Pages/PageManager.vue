@@ -12,6 +12,36 @@
            getPageSections(){
                alert('I am about to get page sections');
            }
+       },
+       data(){
+           return{
+               pageSections: [
+                   {
+                       id: 1,
+                       title: 'Slider',
+                       contentType: 'slides',
+                       content: 'Replace with slides'
+                   },
+                   {
+                       id: 2,
+                       title: 'Courses',
+                       contentType: 'dynamic',
+                       content: 'Courses To be Added'
+                   },
+                   {
+                       id: 3,
+                       title: 'Learn to Cook',
+                       contentType: 'static',
+                       content: null
+                   },
+                   {
+                       id: 4,
+                       title: 'Why Choose Us',
+                       contentType: 'static',
+                       content: null
+                   }
+               ]
+           }
        }
    })
 </script>
@@ -47,7 +77,11 @@
 
                         <div class="col-sm-8">
                             <div class="card page-sections">
-                                <SectionManager/>
+                                <SectionManager
+                                    v-for="(section,index) in pageSections"
+                                    :key="section.id"
+                                    :section="section">
+                                </SectionManager>
                             </div>
                         </div>
                     </div>
