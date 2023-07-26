@@ -1,5 +1,13 @@
+<script>
+import Uploader from "vue-media-upload";
+  export default (await import('vue')).defineComponent({
+      components: {
+          Uploader
+      }
+  })
+</script>
 <template>
     <div>
-        <img src="https://picsum.photos/200/300">
+        <Uploader server="sections/uploadsliderimage" />
     </div>
 </template>

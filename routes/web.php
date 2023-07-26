@@ -39,4 +39,6 @@ Route::get('/page-manager', function (){
     return Inertia::render('PageManager');
 });
 
+Route::post('sections/uploadsliderimage', [\App\Http\Controllers\SectionsController::class, 'uploadSliderImages']);
+
 require __DIR__.'/auth.php';
