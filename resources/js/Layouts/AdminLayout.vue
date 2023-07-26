@@ -13,7 +13,7 @@
             <div  class="brand">
                 <a  href="index.html" class="logo">  Page Builder </a>
                 <div  class="sidebar-toggle-box">
-                    <div  class="fa fa-bars"></div>
+                    <font-awesome-icon icon="fa-bars"></font-awesome-icon>
                 </div>
             </div>
             <!--logo end-->
@@ -23,17 +23,20 @@
                     <!-- settings start -->
                     <li  class="notification">
                         <a  data-toggle="dropdown" href="#">
+                            <font-awesome-icon icon="fa-list-check"></font-awesome-icon>
                         </a>
                     </li>
                     <!-- settings end --><!-- inbox dropdown start-->
                     <li  id="header_inbox_bar" class="notification">
                         <a  data-toggle="dropdown" class="" href="#">
+                            <font-awesome-icon icon="fa-envelope"></font-awesome-icon>
 
                         </a>
                     </li>
                     <!-- inbox dropdown end --><!-- notification dropdown start-->
                     <li  id="header_notification_bar" class="notification">
                         <a  data-toggle="dropdown" class="" href="#">
+                            <font-awesome-icon icon="fa-bell"></font-awesome-icon>
 
                         </a>
                     </li>
@@ -107,5 +110,13 @@
 <style>
    .pull-right{
        float: right;
+   }
+
+   .notification a{
+       display: flex;
+       width: 30px;
+       justify-content: center;
+       align-items: center;
+       height: 30px;
    }
 </style>
