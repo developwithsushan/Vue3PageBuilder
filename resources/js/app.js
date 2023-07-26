@@ -14,12 +14,18 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faListCheck } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faBell } from '@fortawesome/free-solid-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 library.add(faBars)
 library.add(faListCheck)
 library.add(faEnvelope)
 library.add(faBell)
+library.add(faPlus)
+library.add(faTimes)
+library.add(faTrash)
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
