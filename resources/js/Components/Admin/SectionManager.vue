@@ -1,4 +1,6 @@
 <script>
+
+import SlidesManager from "@/Components/Admin/SlidesManager.vue";
 export default (await import('vue')).defineComponent({
       data(){
           return{
@@ -10,6 +12,9 @@ export default (await import('vue')).defineComponent({
               this.isPanelActive = !this.isPanelActive;
           }
       },
+    components:{
+          SlidesManager,
+    },
     props: ['section']
    });
 </script>
@@ -22,6 +27,9 @@ export default (await import('vue')).defineComponent({
 
     <div class="panel" :class="{active:isPanelActive}">
         <div class="panel-content">
+            <SlidesManager v-if="section.contentType=='slides'">
+
+            </SlidesManager>
             {{ section.content }}
         </div>
         <div class="panel-footer">
@@ -134,4 +142,5 @@ export default (await import('vue')).defineComponent({
 </style>
 <script setup>
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import SlidesManager from "@/Components/Admin/SlidesManager.vue";
 </script>
