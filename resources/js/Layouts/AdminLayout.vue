@@ -103,3 +103,9 @@
         <!--main content end-->
     </section>
 </template>
+
+<style>
+   .pull-right{
+       float: right;
+   }
+</style>
