@@ -1,10 +1,12 @@
 
 <script>
    import AdminLayout from "@/Layouts/AdminLayout.vue";
+   import Section from "@/Components/Admin/Section.vue";
 
    export default (await import('vue')).defineComponent({
        components:{
            AdminLayout,
+           Section,
        },
        methods: {
            getPageSections(){
@@ -40,6 +42,12 @@
                                     </div>
                                 </div>
 
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8">
+                            <div class="card page-sections">
+                                <Section/>
                             </div>
                         </div>
                     </div>
