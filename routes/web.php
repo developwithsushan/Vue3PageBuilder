@@ -39,6 +39,9 @@ Route::get('/page-manager', function (){
     return Inertia::render('PageManager');
 });
 
+
+Route::get('page/liveedit/{section_id}', [\App\Http\Controllers\SectionsController::class, 'liveEdit']);
+
 Route::post('sections/uploadsliderimage', [\App\Http\Controllers\SectionsController::class, 'uploadSliderImages']);
 
 require __DIR__.'/auth.php';
