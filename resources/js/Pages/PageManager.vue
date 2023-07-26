@@ -20,7 +20,7 @@
                        id: 1,
                        title: 'Slider',
                        contentType: 'slides',
-                       content: 'Replace with slides'
+                       content: ''
                    },
                    {
                        id: 2,

@@ -11,3 +11,9 @@ import Uploader from "vue-media-upload";
         <Uploader server="sections/uploadsliderimage" />
     </div>
 </template>
+
+<style scoped>
+   ::v-deep .mu-plus-icon{
+       color: #FCB322 !important;
+   }
+</style>
