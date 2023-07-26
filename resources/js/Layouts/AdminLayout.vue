@@ -1,6 +1,5 @@
 <script>
  import '../../css/style.css';
- import '../../css/adminlte.css';
  export default (await import('vue')).defineComponent({
 
  })
