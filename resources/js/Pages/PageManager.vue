@@ -26,19 +26,19 @@
                        id: 2,
                        title: 'Courses',
                        contentType: 'dynamic',
-                       content: 'Courses To be Added'
+                       content: ''
                    },
                    {
                        id: 3,
                        title: 'Learn to Cook',
                        contentType: 'static',
-                       content: null
+                       content: ''
                    },
                    {
                        id: 4,
                        title: 'Why Choose Us',
-                       contentType: 'static',
-                       content: null
+                       contentType: 'statics',
+                       content: ''
                    }
                ]
            }

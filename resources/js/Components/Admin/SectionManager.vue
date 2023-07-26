@@ -1,6 +1,8 @@
 <script>
 
 import SlidesManager from "@/Components/Admin/SlidesManager.vue";
+import StaticSectionManager from "@/Components/Admin/StaticSectionManager.vue";
+
 export default (await import('vue')).defineComponent({
       data(){
           return{
@@ -14,6 +16,7 @@ export default (await import('vue')).defineComponent({
       },
     components:{
           SlidesManager,
+         StaticSectionManager,
     },
     props: ['section']
    });
@@ -30,7 +33,9 @@ export default (await import('vue')).defineComponent({
             <SlidesManager v-if="section.contentType=='slides'">
 
             </SlidesManager>
-            {{ section.content }}
+
+            <StaticSectionManager v-if="section.contentType=='static'" />
+
         </div>
         <div class="panel-footer">
             <div class="right-col">
